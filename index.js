@@ -198,35 +198,35 @@ function getPrototypeOf(object) {
     Languages
 ************************************/
 extend(getPrototypeOf(moment.localeData()),
-  { _jMonths: [ 'Farvardin'
-              , 'Ordibehesht'
-              , 'Khordaad'
-              , 'Tir'
-              , 'Amordaad'
-              , 'Shahrivar'
-              , 'Mehr'
-              , 'Aabaan'
-              , 'Aazar'
-              , 'Dey'
-              , 'Bahman'
-              , 'Esfand'
+  { _jMonths: [ 'Hamal',
+              , 'Sawr'
+              , 'Jawza'
+              , 'Saratan'
+              , 'Asad',
+              , 'Sonbola'
+              , 'Mezan'
+              , 'Aqrab'
+              , 'Qaws'
+              , 'Jaddi'
+              , 'Dalwa'
+              , 'Hoot'
               ]
   , jMonths: function (m) {
       return this._jMonths[m.jMonth()]
     }
 
-  , _jMonthsShort:  [ 'Far'
-                    , 'Ord'
-                    , 'Kho'
-                    , 'Tir'
-                    , 'Amo'
-                    , 'Sha'
-                    , 'Meh'
-                    , 'Aab'
-                    , 'Aaz'
-                    , 'Dey'
-                    , 'Bah'
-                    , 'Esf'
+  , _jMonthsShort:  [ 'Ham'
+                    , 'Saw'
+                    , 'Jaw'
+                    , 'Sar'
+                    , 'Asd'
+                    , 'Son'
+                    , 'Mez'
+                    , 'Aqr'
+                    , 'Qaw'
+                    , 'Jad'
+                    , 'Dal'
+                    , 'Hoo'
                     ]
   , jMonthsShort: function (m) {
       return this._jMonthsShort[m.jMonth()]
@@ -865,13 +865,15 @@ jMoment.loadPersian = function (args) {
       }
     , jMonths:
       {
-        'persian': ('فروردین_اردیبهشت_خرداد_تیر_امرداد_شهریور_مهر_آبان_آذر_دی_بهمن_اسفند').split('_'),
-        'persian-modern': ('فروردین_اردیبهشت_خرداد_تیر_مرداد_شهریور_مهر_آبان_آذر_دی_بهمن_اسفند').split('_')
+        'persian': ('حمل_ثور_جوزا_سرطان_اسد_سنبله_میزان_عقرب_قوس_جدی_دلو_حوت').split('_'),
+        'persian-modern': ('حمل_ثور_جوزا_سرطان_اسد_سنبله_میزان_عقرب_قوس_جدی_دلو_حوت').split('_'),
+        'afghan': ('حمل_ثور_جوزا_سرطان_اسد_سنبله_میزان_عقرب_قوس_جدی_دلو_حوت').split('_')
       }[dialect]
     , jMonthsShort:
       {
-        'persian': 'فرو_ارد_خرد_تیر_امر_شهر_مهر_آبا_آذر_دی_بهم_اسف'.split('_'),
-        'persian-modern': 'فرو_ارد_خرد_تیر_مرد_شهر_مهر_آبا_آذر_دی_بهم_اسف'.split('_')
+        'persian': 'حمل_ثور_جوز_سرط_اسد_سنب_میز_عقر_قوس_جدی_دلو_حوت'.split('_'),
+        'persian-modern': 'حمل_ثور_جوز_سرط_اسد_سنب_میز_عقر_قوس_جدی_دلو_حوت'.split('_'),
+        'afghan': 'حمل_ثور_جوز_سرط_اسد_سنب_میز_عقر_قوس_جدی_دلو_حوت'.split('_')
       }[dialect]
     }
   )
